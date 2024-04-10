@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import InputField from "./InputField";
+import { toast } from "react-hot-toast";
 const Login = () => {
   const [loginData, setLoginData] = useState({
     username: "",
@@ -19,7 +20,11 @@ const Login = () => {
       console.log("submit", isLogged);
 
       window.open("https://www.pup.edu.ph/", "_blank");
-    }
+
+      return toast.success("User Authenticated!")
+    } 
+
+    return toast.error("Invalid Credentials!")
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

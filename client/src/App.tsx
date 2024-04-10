@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import Login from "./components/Login";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <div className="absolute top-0 w-1/4 h-px inset-x-60 bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
       </div>
       <Login />
+      <Toaster />
     </>
   );
 }
